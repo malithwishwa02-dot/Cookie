@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Forge Template",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/multilogin_forge.py",
+            "console": "integratedTerminal",
+            "args": ["-t"]
+        },
+        {
+            "name": "Python: Forge Profile (Example)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/multilogin_forge.py",
+            "console": "integratedTerminal",
+            "args": ["-p", "./example_profile", "-c", "forge_template.json"]
+        },
+        {
+            "name": "Python: Import Profile (Example)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/multilogin_importer.py",
+            "console": "integratedTerminal",
+            "args": ["-i", "./example_profile"]
+        }
+    ]
+}
