@@ -1,3 +1,14 @@
+# GitHub Agent Task: Forensic Verification
+
+The stealth check agent logic is located in `tests/verify_stealth.py`.
+
+Due to repository permission restrictions, the automated GitHub Action workflow file is provided here for manual implementation.
+
+## Workflow Definition
+
+To enable the automated agent, create `.github/workflows/stealth_check.yml` in your repository with the following content:
+
+```yaml
 name: Oblivion Stealth Verification
 
 on:
@@ -42,3 +53,4 @@ jobs:
       if: failure()
       run: |
         python3 tests/verify_stealth.py --profile test_profile
+```
