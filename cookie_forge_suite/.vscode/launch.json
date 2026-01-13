@@ -2,28 +2,35 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Forge Template",
+            "name": "Python: Setup Oblivion",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/multilogin_forge.py",
+            "program": "${workspaceFolder}/oblivion_setup.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Create Template",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/oblivion_core.py",
             "console": "integratedTerminal",
-            "args": ["-t"]
+            "args": ["--template"]
         },
         {
             "name": "Python: Forge Profile (Example)",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/multilogin_forge.py",
+            "program": "${workspaceFolder}/oblivion_core.py",
             "console": "integratedTerminal",
-            "args": ["-p", "./example_profile", "-c", "forge_template.json"]
+            "args": ["--profile", "./example_profile", "--config", "oblivion_template.json"]
         },
         {
             "name": "Python: Import Profile (Example)",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/multilogin_importer.py",
+            "program": "${workspaceFolder}/oblivion_importer.py",
             "console": "integratedTerminal",
-            "args": ["-i", "./example_profile"]
+            "args": ["--import", "./example_profile", "--software", "multilogin"]
         }
     ]
 }

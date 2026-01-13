@@ -1,0 +1,414 @@
+{
+  "metadata": {
+    "name": "enterprise_forged_profile_v5",
+    "description": "Advanced synthetic profile with comprehensive detection bypass",
+    "engine": "OblivionForge Nexus v5.0",
+    "version": "5.0.0",
+    "target_risk_level": "VERY_LOW",
+    "creation_timestamp": "2024-01-15T10:30:00Z"
+  },
+  "core_timeline": {
+    "base_age_days": 365,
+    "max_age_days": 730,
+    "jitter_enabled": true,
+    "jitter_range_hours": 48,
+    "realistic_access_pattern": true,
+    "access_frequency": "regular",
+    "session_duration_minutes": {
+      "min": 5,
+      "max": 120
+    }
+  },
+  "cookies": [
+    {
+      "domain": ".google.com",
+      "name": "SID",
+      "value": "FAKE_SESSION_ID_XYZ123456789_ABCDEF",
+      "age_days": 365,
+      "secure": true,
+      "http_only": true,
+      "same_site": "lax",
+      "encryption": "v11",
+      "priority": "HIGH",
+      "integrity_check": true,
+      "host_key_hash": true
+    },
+    {
+      "domain": ".google.com",
+      "name": "HSID",
+      "value": "HSID_VALUE_987654321",
+      "age_days": 365,
+      "secure": true,
+      "http_only": true,
+      "same_site": "none",
+      "encryption": "v11"
+    },
+    {
+      "domain": ".facebook.com",
+      "name": "c_user",
+      "value": "1000876543210",
+      "age_days": 270,
+      "secure": true,
+      "http_only": false,
+      "same_site": "lax",
+      "encryption": "v10"
+    },
+    {
+      "domain": ".facebook.com",
+      "name": "xs",
+      "value": "SESSION_TOKEN_ABC:XYZ_1234567890",
+      "age_days": 270,
+      "secure": true,
+      "http_only": true,
+      "same_site": "none",
+      "encryption": "v10"
+    },
+    {
+      "domain": ".amazon.com",
+      "name": "session-id",
+      "value": "123-4567890-1234567",
+      "age_days": 180,
+      "secure": true,
+      "http_only": true,
+      "same_site": "lax",
+      "encryption": "v10"
+    },
+    {
+      "domain": ".paypal.com",
+      "name": "X-PP-SILOVER",
+      "value": "name%3DLIVE3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1736726400",
+      "age_days": 90,
+      "secure": true,
+      "http_only": false,
+      "same_site": "none"
+    },
+    {
+      "domain": ".stripe.com",
+      "name": "__stripe_mid",
+      "value": "mid_xyz123abc456_789def",
+      "age_days": 730,
+      "secure": true,
+      "http_only": false,
+      "same_site": "lax"
+    },
+    {
+      "domain": ".example-bank.com",
+      "name": "JSESSIONID",
+      "value": "ABCDEF1234567890ABCDEF1234567890",
+      "age_days": 30,
+      "secure": true,
+      "http_only": true,
+      "same_site": "strict"
+    }
+  ],
+  "localstorage": [
+    {
+      "origin": "https://www.google.com",
+      "key": "google_account_state",
+      "value": "{\\"logged_in\\":true,\\"email\\":\\"user@enterprise.com\\",\\"last_active\\":\\"2024-01-15T10:25:00Z\\",\\"preferences\\":{\\"theme\\":\\"dark\\",\\"language\\":\\"en-US\\"}}",
+      "age_days": 365,
+      "meta_timestamp": true,
+      "leveldb_integration": true
+    },
+    {
+      "origin": "https://www.facebook.com",
+      "key": "fb_user_data",
+      "value": "{\\"user_id\\":\\"1000876543210\\",\\"name\\":\\"Enterprise User\\",\\"locale\\":\\"en_US\\",\\"timezone\\":-5,\\"dark_mode\\":true}",
+      "age_days": 270,
+      "meta_timestamp": true
+    },
+    {
+      "origin": "https://www.amazon.com",
+      "key": "cart_state",
+      "value": "{\\"items\\":[{\\"asin\\":\\"B08N5WRWNW\\",\\"title\\":\\"Enterprise Laptop\\",\\"quantity\\":1,\\"added\\":\\"2024-01-10T14:30:00Z\\"}],\\"last_updated\\":\\"2024-01-15T09:15:00Z\\"}",
+      "age_days": 180
+    }
+  ],
+  "indexeddb": {
+    "enabled": true,
+    "databases": [
+      {
+        "name": "user_settings",
+        "origin": "https://www.google.com",
+        "stores": [
+          {
+            "name": "preferences",
+            "key": "ui_config",
+            "value": "{\\"layout\\":\\"compact\\",\\"notifications\\":true,\\"auto_save\\":true}",
+            "age_days": 365
+          }
+        ]
+      }
+    ]
+  },
+  "history_forgery": {
+    "enabled": true,
+    "realistic_pattern": true,
+    "age_days": 365,
+    "url_categories": {
+      "search_engines": 25,
+      "social_media": 20,
+      "shopping": 15,
+      "banking_finance": 10,
+      "news": 10,
+      "entertainment": 10,
+      "productivity": 10
+    },
+    "urls": [
+      "https://www.google.com/search?q=enterprise+cloud+solutions",
+      "https://www.google.com/search?q=stock+market+trends+2024",
+      "https://www.google.com/maps/search/coffee+shops+near+financial+district",
+      "https://mail.google.com/mail/u/0/#inbox",
+      "https://mail.google.com/mail/u/0/#sent",
+      "https://drive.google.com/drive/u/0/my-drive",
+      "https://docs.google.com/document/d/ABC123/edit",
+      "https://calendar.google.com/calendar/u/0/r",
+      "https://www.facebook.com/",
+      "https://www.facebook.com/messages/t/",
+      "https://www.facebook.com/notifications",
+      "https://www.facebook.com/groups/technology",
+      "https://www.amazon.com/",
+      "https://www.amazon.com/gp/cart/view.html",
+      "https://www.amazon.com/gp/your-account/order-history",
+      "https://www.amazon.com/gp/buy-again",
+      "https://www.paypal.com/myaccount/home",
+      "https://www.paypal.com/myaccount/transfer/homepage",
+      "https://www.paypal.com/myaccount/wallet",
+      "https://www.example-bank.com/login",
+      "https://www.example-bank.com/accounts/overview",
+      "https://www.example-bank.com/transfers/history",
+      "https://www.example-bank.com/investments/portfolio",
+      "https://news.ycombinator.com/",
+      "https://www.reddit.com/r/technology/",
+      "https://www.reddit.com/r/programming/",
+      "https://stackoverflow.com/questions",
+      "https://stackoverflow.com/users/1234567/dashboard",
+      "https://github.com/",
+      "https://github.com/notifications",
+      "https://github.com/enterprise-user?tab=repositories",
+      "https://twitter.com/home",
+      "https://twitter.com/notifications",
+      "https://www.linkedin.com/feed/",
+      "https://www.linkedin.com/mynetwork/",
+      "https://www.linkedin.com/jobs/",
+      "https://www.youtube.com/feed/subscriptions",
+      "https://www.youtube.com/watch?v=ABC123XYZ",
+      "https://www.netflix.com/browse",
+      "https://www.netflix.com/watch/80125584",
+      "https://slack.com/",
+      "https://app.slack.com/client/ABC123/XYZ789",
+      "https://trello.com/b/ABC123/project-board",
+      "https://figma.com/files/team/123456/project-789",
+      "https://cloud.digitalocean.com/droplets",
+      "https://aws.amazon.com/console/",
+      "https://portal.azure.com/"
+    ],
+    "visit_pattern": {
+      "sessions_per_day": {
+        "min": 1,
+        "max": 4
+      },
+      "pages_per_session": {
+        "min": 3,
+        "max": 15
+      },
+      "time_between_visits_hours": {
+        "min": 0.5,
+        "max": 72
+      }
+    }
+  },
+  "cache_forgery": {
+    "enabled": true,
+    "age_days": 365,
+    "superfasthash_recalculation": true,
+    "http_headers_forgery": true,
+    "entries": [
+      {
+        "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+        "content_type": "image/png",
+        "cache_control": "public, max-age=31536000",
+        "last_modified": "2023-01-15T10:30:00Z"
+      },
+      {
+        "url": "https://www.facebook.com/rsrc.php/v3/yG/r/XYZ123.png",
+        "content_type": "image/png",
+        "cache_control": "public, max-age=86400",
+        "etag": "\\"abc123xyz789\\""
+      },
+      {
+        "url": "https://www.amazon.com/favicon.ico",
+        "content_type": "image/x-icon",
+        "cache_control": "public, max-age=604800",
+        "last_modified": "2023-06-01T00:00:00Z"
+      },
+      {
+        "url": "https://www.paypal.com/sdk/js",
+        "content_type": "application/javascript",
+        "cache_control": "public, max-age=3600",
+        "etag": "\\"def456uvw012\\""
+      }
+    ]
+  },
+  "fingerprint_synchronization": {
+    "enabled": true,
+    "age_days": 365,
+    "comprehensive": true,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "platform": {
+      "os": "Windows 10",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8
+    },
+    "screen": {
+      "width": 1920,
+      "height": 1080,
+      "availWidth": 1920,
+      "availHeight": 1040,
+      "colorDepth": 24,
+      "pixelDepth": 24,
+      "orientation": {
+        "type": "landscape-primary",
+        "angle": 0
+      }
+    },
+    "canvas": {
+      "mode": "noise",
+      "consistency": "high",
+      "winding": true
+    },
+    "webgl": {
+      "mode": "noise",
+      "vendor": "Google Inc. (Intel)",
+      "renderer": "ANGLE (Intel, Intel(R) UHD Graphics 630 Direct3D11 vs_5_0 ps_5_0)",
+      "parameters": {
+        "antialiasing": true,
+        "alpha": true,
+        "depth": true,
+        "stencil": true
+      }
+    },
+    "audio": {
+      "mode": "noise",
+      "fidelity": "high"
+    },
+    "fonts": [
+      "Arial",
+      "Arial Black",
+      "Arial Narrow",
+      "Times New Roman",
+      "Courier New",
+      "Courier",
+      "Verdana",
+      "Georgia",
+      "Palatino",
+      "Garamond",
+      "Bookman",
+      "Comic Sans MS",
+      "Trebuchet MS",
+      "Impact",
+      "Lucida Console",
+      "Tahoma",
+      "Geneva"
+    ],
+    "plugins": [
+      {
+        "name": "Chrome PDF Plugin",
+        "filename": "internal-pdf-viewer",
+        "description": "Portable Document Format"
+      },
+      {
+        "name": "Chrome PDF Viewer",
+        "filename": "mhjfbmdgcfjbbpaeojofohoefgiehjai",
+        "description": ""
+      },
+      {
+        "name": "Native Client",
+        "filename": "internal-nacl-plugin",
+        "description": ""
+      }
+    ],
+    "mimeTypes": [
+      {
+        "type": "application/pdf",
+        "suffixes": "pdf",
+        "description": "Portable Document Format",
+        "enabledPlugin": "Chrome PDF Plugin"
+      },
+      {
+        "type": "text/pdf",
+        "suffixes": "pdf",
+        "description": "Portable Document Format",
+        "enabledPlugin": "Chrome PDF Plugin"
+      }
+    ],
+    "timezone": {
+      "mode": "real",
+      "offset": -300,
+      "name": "America/New_York"
+    },
+    "geolocation": {
+      "mode": "real",
+      "latitude": 40.7128,
+      "longitude": -74.0060,
+      "accuracy": 100
+    },
+    "language": {
+      "primary": "en-US",
+      "languages": ["en-US", "en", "en-GB"]
+    },
+    "storage_estimation": {
+      "quota": 1073741824,
+      "usage": 536870912,
+      "usageDetails": {
+        "indexedDB": 268435456,
+        "cacheStorage": 134217728,
+        "serviceWorker": 67108864,
+        "localStorage": 33554432,
+        "other": 33554432
+      }
+    }
+  },
+  "forensic_opsec": {
+    "enabled": true,
+    "age_days": 365,
+    "timestamp_alignment": true,
+    "ntfs_integrity": true,
+    "move_instead_of_copy": true,
+    "file_system_consistency": true,
+    "artifact_validation": true,
+    "cleanup_temp_files": true
+  },
+  "injection_methodology": {
+    "primary_method": "hybrid",
+    "fallback_method": "direct",
+    "cdp_settings": {
+      "enabled": true,
+      "port_range": [9222, 9322],
+      "timeout_seconds": 30,
+      "headless": false,
+      "user_data_dir_lock_timeout": 5
+    },
+    "encryption_handling": {
+      "validate_keys": true,
+      "fallback_to_fake": false,
+      "key_extraction_retries": 3,
+      "platform_specific": true
+    },
+    "integrity_checks": {
+      "superfasthash_validation": true,
+      "cookie_integrity_check": true,
+      "database_corruption_check": true,
+      "file_permission_validation": true
+    }
+  },
+  "validation_and_reporting": {
+    "post_forgery_validation": true,
+    "generate_report": true,
+    "report_format": "json",
+    "include_artifacts_list": true,
+    "include_fingerprint_hash": true,
+    "include_timeline_summary": true
+  }
+}
